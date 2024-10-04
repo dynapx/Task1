@@ -1,0 +1,1216 @@
+{
+    "resultsPerPage": 13,
+    "startIndex": 0,
+    "totalResults": 13,
+    "format": "NVD_CVE",
+    "version": "2.0",
+    "timestamp": "2024-10-04T11:24:12.760",
+    "vulnerabilities": [
+        {
+            "cve": {
+                "id": "CVE-2021-43811",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2021-12-08T23:15:08.123",
+                "lastModified": "2021-12-13T19:15:46.587",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Sockeye is an open-source sequence-to-sequence framework for Neural Machine Translation built on PyTorch. Sockeye uses YAML to store model and data configurations on disk. Versions below 2.3.24 use unsafe YAML loading, which can be made to execute arbitrary code embedded in config files. An attacker can add malicious code to the config file of a trained model and attempt to convince users to download and run it. If users run the model, the embedded code will run locally. The issue is fixed in version 2.3.24."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Sockeye es un marco de trabajo de secuencia a secuencia de c\u00f3digo abierto para la traducci\u00f3n autom\u00e1tica neuronal construido sobre PyTorch. Sockeye usa YAML para almacenar configuraciones de modelos y datos en el disco. Las versiones anteriores a 2.3.24, usan una carga insegura de YAML, que puede hacer que se ejecute c\u00f3digo arbitrario incrustado en los archivos de configuraci\u00f3n. Un atacante puede a\u00f1adir c\u00f3digo malicioso al archivo de configuraci\u00f3n de un modelo entrenado e intentar convencer a los usuarios de que lo descarguen y lo ejecuten. Si los usuarios ejecutan el modelo, el c\u00f3digo insertado se ejecutar\u00e1 localmente. El problema ha sido corregido en la versi\u00f3n 2.3.24"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 6.8
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:amazon:sockeye:*:*:*:*:*:python:*:*",
+                                        "versionEndExcluding": "2.3.24",
+                                        "matchCriteriaId": "5636D1BB-6FCA-4027-84CB-1FCDB64F69A7"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/awslabs/sockeye/pull/964",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/awslabs/sockeye/releases/tag/2.3.24",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/awslabs/sockeye/security/advisories/GHSA-ggmr-44cv-24pm",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-4118",
+                "sourceIdentifier": "security@huntr.dev",
+                "published": "2021-12-23T18:15:07.407",
+                "lastModified": "2022-01-04T16:27:54.627",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "pytorch-lightning is vulnerable to Deserialization of Untrusted Data"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "pytorch-lightning es vulnerable a una Deserializaci\u00f3n de Datos No Confiables"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV30": [
+                        {
+                            "source": "security@huntr.dev",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 6.8
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security@huntr.dev",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pytorchlightning:pytorch_lightning:*:*:*:*:*:python:*:*",
+                                        "versionEndExcluding": "1.6.0",
+                                        "matchCriteriaId": "664718C9-0707-4EEB-ABFE-C9274A3EC212"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorchlightning/pytorch-lightning/commit/62f1e82e032eb16565e676d39e0db0cac7e34ace",
+                        "source": "security@huntr.dev",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://huntr.dev/bounties/31832f0c-e5bb-4552-a12c-542f81f111e6",
+                        "source": "security@huntr.dev",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2022-0845",
+                "sourceIdentifier": "security@huntr.dev",
+                "published": "2022-03-05T22:15:07.843",
+                "lastModified": "2022-03-10T22:00:01.417",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Code Injection in GitHub repository pytorchlightning/pytorch-lightning prior to 1.6.0."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una Inyecci\u00f3n de C\u00f3digo en el repositorio de GitHub pytorchlightning/pytorch-lightning versiones anteriores a 1.6.0"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV30": [
+                        {
+                            "source": "security@huntr.dev",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "LOW",
+                                "baseScore": 7.3,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.5
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10.0
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 10.0,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "security@huntr.dev",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pytorchlightning:pytorch_lightning:*:*:*:*:*:python:*:*",
+                                        "versionEndExcluding": "1.6.0",
+                                        "matchCriteriaId": "664718C9-0707-4EEB-ABFE-C9274A3EC212"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorchlightning/pytorch-lightning/commit/8b7a12c52e52a06408e9231647839ddb4665e8ae",
+                        "source": "security@huntr.dev",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://huntr.dev/bounties/a795bf93-c91e-4c79-aae8-f7d8bda92e2a",
+                        "source": "security@huntr.dev",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2022-45907",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2022-11-26T02:15:10.253",
+                "lastModified": "2023-08-08T14:21:49.707",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In PyTorch before trunk/89695, torch.jit.annotations.parse_type_line can cause arbitrary code execution because eval is used unsafely."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "En PyTorch anterior a trunk/89695, torch.jit.annotations.parse_type_line puede causar la ejecuci\u00f3n de c\u00f3digo arbitrario porque eval se usa de manera insegura."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*",
+                                        "versionEndExcluding": "1.13.1",
+                                        "matchCriteriaId": "17B8827A-469E-484D-845F-8DA235DB1BBA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorch/pytorch/commit/767f6aa49fe20a2766b9843d01e3b7f7793df6a3",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/pytorch/issues/88868",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2023-43654",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2023-09-28T23:15:09.627",
+                "lastModified": "2023-10-31T18:35:18.223",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TorchServe is a tool for serving and scaling PyTorch models in production. TorchServe default configuration lacks proper input validation, enabling third parties to invoke remote HTTP download requests and write files to the disk. This issue could be taken advantage of to compromise the integrity of the system and sensitive data. This issue is present in versions 0.1.0 to 0.8.1. A user is able to load the model of their choice from any URL that they would like to use. The user of TorchServe is responsible for configuring both the allowed_urls and specifying the model URL to be used. A pull request to warn the user when the default value for allowed_urls is used has been merged in PR #2534. TorchServe release 0.8.2 includes this change. Users are advised to upgrade. There are no known workarounds for this issue."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TorchServe es una herramienta para servir y escalar modelos de PyTorch en producci\u00f3n. La configuraci\u00f3n predeterminada de TorchServe carece de una validaci\u00f3n de entrada adecuada, lo que permite a terceros invocar solicitudes de descarga HTTP remotas y escribir archivos en el disco. Se podr\u00eda aprovechar este problema para comprometer la integridad del sistema y los datos confidenciales. Este problema est\u00e1 presente en las versiones 0.1.0 a 0.8.1. Un usuario puede cargar el modelo de su elecci\u00f3n desde cualquier URL que desee utilizar. El usuario de TorchServe es responsable de configurar las URL permitidas y especificar la URL modelo que se utilizar\u00e1. En PR #2534 se fusion\u00f3 una solicitud de extracci\u00f3n para advertir al usuario cuando se utiliza el valor predeterminado para Allow_urls. La versi\u00f3n 0.8.2 de TorchServe incluye este cambio. Se recomienda a los usuarios que actualicen. No se conocen workarounds para este problema."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-918"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pytorch:torchserve:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "0.1.0",
+                                        "versionEndExcluding": "0.8.2",
+                                        "matchCriteriaId": "1C72B515-779F-4815-B20E-80DF998B771B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://packetstormsecurity.com/files/175095/PyTorch-Model-Server-Registration-Deserialization-Remote-Code-Execution.html",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/pull/2534",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/releases/tag/v0.8.2",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/security/advisories/GHSA-8fxr-qfr9-p34w",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2023-48299",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2023-11-21T21:15:09.077",
+                "lastModified": "2023-11-29T02:31:52.117",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TorchServe is a tool for serving and scaling PyTorch models in production. Starting in version 0.1.0 and prior to version 0.9.0, using the model/workflow management API, there is a chance of uploading potentially harmful archives that contain files that are extracted to any location on the filesystem that is within the process permissions. Leveraging this issue could aid third-party actors in hiding harmful code in open-source/public models, which can be downloaded from the internet, and take advantage of machines running Torchserve. The ZipSlip issue in TorchServe has been fixed by validating the paths of files contained within a zip archive before extracting them. TorchServe release 0.9.0 includes fixes to address the ZipSlip vulnerability."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TorchServe es una herramienta para servir y escalar modelos de PyTorch en producci\u00f3n. A partir de la versi\u00f3n 0.1.0 y antes de la versi\u00f3n 0.9.0, al utilizar la API de administraci\u00f3n de modelo/flujo de trabajo, existe la posibilidad de cargar archivos potencialmente da\u00f1inos que contengan archivos extra\u00eddos a cualquier ubicaci\u00f3n del sistema de archivos que est\u00e9 dentro de los permisos del proceso. Aprovechar este problema podr\u00eda ayudar a terceros a ocultar c\u00f3digo da\u00f1ino en modelos p\u00fablicos/de c\u00f3digo abierto, que se pueden descargar de Internet, y aprovechar las m\u00e1quinas que ejecutan Torchserve. El problema de Zipslip en TorchServe se solucion\u00f3 validando las rutas de los archivos contenidos en un archivo zip antes de extraerlos. La versi\u00f3n 0.9.0 de TorchServe incluye correcciones para abordar la vulnerabilidad Zipslip."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 1.4
+                        },
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 1.4
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pytorch:torchserve:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "0.1.0",
+                                        "versionEndExcluding": "0.9.0",
+                                        "matchCriteriaId": "F958D5AE-E57F-4C08-A946-D75B9857CD1B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorch/serve/commit/bfb3d42396727614aef625143b4381e64142f9bb",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/pull/2634",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/releases/tag/v0.9.0",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/security/advisories/GHSA-m2mj-pr4f-h9jp",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-31580",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2024-04-17T19:15:07.783",
+                "lastModified": "2024-07-03T01:55:11.977",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "PyTorch before v2.2.0 was discovered to contain a heap buffer overflow vulnerability in the component /runtime/vararg_functions.cpp. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted input."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Se descubri\u00f3 que PyTorch anterior a v2.2.0 conten\u00eda una vulnerabilidad de desbordamiento de b\u00fafer de almacenamiento din\u00e1mico en el componente /runtime/vararg_functions.cpp. Esta vulnerabilidad permite a los atacantes provocar una denegaci\u00f3n de servicio (DoS) mediante una entrada manipulada."
+                    }
+                ],
+                "metrics": {},
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-122"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://gist.github.com/1047524396/038c78f2f007345e6f497698ace2aa3d",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/pytorch/commit/b5c3a17c2c207ebefcb85043f0cf94be9b2fef81",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-31583",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2024-04-17T19:15:07.950",
+                "lastModified": "2024-07-03T01:55:12.663",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Pytorch before version v2.2.0 was discovered to contain a use-after-free vulnerability in torch/csrc/jit/mobile/interpreter.cpp."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Se descubri\u00f3 que Pytorch anterior a la versi\u00f3n v2.2.0 conten\u00eda una vulnerabilidad de use-after-free en torch/csrc/jit/mobile/interpreter.cpp."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-416"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://gist.github.com/1047524396/43e19a41f2b36503a4a228c32cdbc176",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/pytorch/blob/v2.1.2/torch/csrc/jit/mobile/interpreter.cpp#L132",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/pytorch/commit/9c7071b0e324f9fb68ab881283d6b8d388a4bcd2",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-31584",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2024-04-19T21:15:08.080",
+                "lastModified": "2024-07-03T01:55:13.417",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Pytorch before v2.2.0 has an Out-of-bounds Read vulnerability via the component torch/csrc/jit/mobile/flatbuffer_loader.cpp."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Pytorch anterior a v2.2.0 tiene una vulnerabilidad de lectura fuera de los l\u00edmites a trav\u00e9s del componente torch/csrc/jit/mobile/flatbuffer_loader.cpp."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "LOW",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 2.1,
+                            "impactScore": 3.4
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-125"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorch/pytorch/blob/v2.1.2/torch/csrc/jit/mobile/flatbuffer_loader.cpp#L305",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/pytorch/commit/7c35874ad664e74c8e4252d67521f3986eadb0e6",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-37059",
+                "sourceIdentifier": "6f8de1f0-f67e-45a6-b68f-98777fdb759c",
+                "published": "2024-06-04T12:15:12.227",
+                "lastModified": "2024-06-04T16:57:41.053",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Deserialization of untrusted data can occur in versions of the MLflow platform running version 0.5.0 or newer, enabling a maliciously uploaded PyTorch model to run arbitrary code on an end user\u2019s system when interacted with."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "La deserializaci\u00f3n de datos que no son de confianza puede ocurrir en versiones de la plataforma MLflow que ejecutan la versi\u00f3n 0.5.0 o posterior, lo que permite que un modelo de PyTorch cargado maliciosamente ejecute c\u00f3digo arbitrario en el sistema de un usuario final cuando interact\u00faa con \u00e9l."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://hiddenlayer.com/sai-security-advisory/mlflow-june2024",
+                        "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-5452",
+                "sourceIdentifier": "security@huntr.dev",
+                "published": "2024-06-06T18:15:20.970",
+                "lastModified": "2024-06-07T14:56:05.647",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A remote code execution (RCE) vulnerability exists in the lightning-ai/pytorch-lightning library version 2.2.1 due to improper handling of deserialized user input and mismanagement of dunder attributes by the `deepdiff` library. The library uses `deepdiff.Delta` objects to modify application state based on frontend actions. However, it is possible to bypass the intended restrictions on modifying dunder attributes, allowing an attacker to construct a serialized delta that passes the deserializer whitelist and contains dunder attributes. When processed, this can be exploited to access other modules, classes, and instances, leading to arbitrary attribute write and total RCE on any self-hosted pytorch-lightning application in its default configuration, as the delta endpoint is enabled by default."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Existe una vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo (RCE) en la versi\u00f3n 2.2.1 de la librer\u00eda Lightning-ai/pytorch-lightning debido al manejo inadecuado de la entrada del usuario deserializada y a la mala administraci\u00f3n de los atributos dunder por parte de la librer\u00eda \"deepdiff\". La librer\u00eda utiliza objetos `deepdiff.Delta` para modificar el estado de la aplicaci\u00f3n en funci\u00f3n de las acciones del frontend. Sin embargo, es posible eludir las restricciones previstas sobre la modificaci\u00f3n de los atributos de dunder, lo que permite a un atacante construir un delta serializado que pasa la lista blanca de deserializadores y contiene atributos de dunder. Cuando se procesa, esto se puede aprovechar para acceder a otros m\u00f3dulos, clases e instancias, lo que lleva a una escritura de atributos arbitraria y un RCE total en cualquier aplicaci\u00f3n pytorch-lightning autohospedada en su configuraci\u00f3n predeterminada, ya que el endpoint delta est\u00e1 habilitado de forma predeterminada."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "security@huntr.dev",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security@huntr.dev",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-915"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://huntr.com/bounties/486add92-275e-4a7b-92f9-42d84bc759da",
+                        "source": "security@huntr.dev"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-35198",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2024-07-19T02:15:14.150",
+                "lastModified": "2024-08-07T16:15:44.537",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TorchServe is a flexible and easy-to-use tool for serving and scaling PyTorch models in production. TorchServe 's check on allowed_urls configuration can be by-passed if the URL contains characters such as \"..\" but it does not prevent the model from being downloaded into the model store. Once a file is downloaded, it can be referenced without providing a URL the second time, which effectively bypasses the allowed_urls security check. Customers using PyTorch inference Deep Learning Containers (DLC) through Amazon SageMaker and EKS are not affected. This issue in TorchServe has been fixed by validating the URL without characters such as \"..\" before downloading see PR #3082. TorchServe release 0.11.0 includes the fix to address this vulnerability. Users are advised to upgrade. There are no known workarounds for this vulnerability."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TorchServe es una herramienta flexible y f\u00e1cil de usar para servir y escalar modelos PyTorch en producci\u00f3n. La verificaci\u00f3n de TorchServe en la configuraci\u00f3n de Allow_urls se puede omitir si la URL contiene caracteres como \"..\" pero no impide que el modelo se descargue en la tienda de modelos. Una vez que se descarga un archivo, se puede hacer referencia a \u00e9l sin proporcionar una URL la segunda vez, lo que efectivamente evita la verificaci\u00f3n de seguridad de Allow_urls. Los clientes que utilizan contenedores de aprendizaje profundo (DLC) de inferencia de PyTorch a trav\u00e9s de Amazon SageMaker y EKS no se ven afectados. Este problema en TorchServe se solucion\u00f3 validando la URL sin caracteres como \"..\" antes de descargar, consulte PR #3082. La versi\u00f3n 0.11.0 de TorchServe incluye la soluci\u00f3n para solucionar esta vulnerabilidad. Se recomienda a los usuarios que actualicen. No se conocen workarounds para esta vulnerabilidad."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-706"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorch/serve/pull/3082",
+                        "source": "security-advisories@github.com"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/releases/tag/v0.11.0",
+                        "source": "security-advisories@github.com"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/security/advisories/GHSA-wxcx-gg9c-fwp2",
+                        "source": "security-advisories@github.com"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-35199",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2024-07-19T02:15:14.777",
+                "lastModified": "2024-08-07T16:15:44.737",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TorchServe is a flexible and easy-to-use tool for serving and scaling PyTorch models in production. In affected versions the two gRPC ports 7070 and 7071, are not bound to [localhost](http://localhost/) by default, so when TorchServe is launched, these two interfaces are bound to all interfaces. Customers using PyTorch inference Deep Learning Containers (DLC) through Amazon SageMaker and EKS are not affected. This issue in TorchServe has been fixed in PR #3083. TorchServe release 0.11.0 includes the fix to address this vulnerability. Users are advised to upgrade. There are no known workarounds for this vulnerability."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TorchServe es una herramienta flexible y f\u00e1cil de usar para servir y escalar modelos PyTorch en producci\u00f3n. En las versiones afectadas, los dos puertos gRPC 7070 y 7071 no est\u00e1n vinculados a [localhost](http://localhost/) de forma predeterminada, por lo que cuando se inicia TorchServe, estas dos interfaces est\u00e1n vinculadas a todas las interfaces. Los clientes que utilizan contenedores de aprendizaje profundo (DLC) de inferencia de PyTorch a trav\u00e9s de Amazon SageMaker y EKS no se ven afectados. Este problema en TorchServe se solucion\u00f3 en PR #3083. La versi\u00f3n 0.11.0 de TorchServe incluye la soluci\u00f3n para abordar esta vulnerabilidad. Se recomienda a los usuarios que actualicen. No se conocen workarounds para esta vulnerabilidad."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 8.2,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.2
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-668"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/pytorch/serve/pull/3083",
+                        "source": "security-advisories@github.com"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/releases/tag/v0.11.0",
+                        "source": "security-advisories@github.com"
+                    },
+                    {
+                        "url": "https://github.com/pytorch/serve/security/advisories/GHSA-hhpg-v63p-wp7w",
+                        "source": "security-advisories@github.com"
+                    }
+                ]
+            }
+        }
+    ]
+}

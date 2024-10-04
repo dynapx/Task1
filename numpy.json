@@ -1,0 +1,1684 @@
+{
+    "resultsPerPage": 12,
+    "startIndex": 0,
+    "totalResults": 12,
+    "format": "NVD_CVE",
+    "version": "2.0",
+    "timestamp": "2024-10-04T11:24:10.827",
+    "vulnerabilities": [
+        {
+            "cve": {
+                "id": "CVE-2017-12852",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2017-08-15T16:29:00.200",
+                "lastModified": "2019-10-03T00:03:26.223",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list or ndarray will stick into an infinite loop, which can allow attackers to cause a DoS attack."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "La funci\u00f3n numpy.pad en Numpy 1.13.1 y versiones anteriores no cuenta con validaci\u00f3n de entrada. Una lista vac\u00eda o ndarray entrar\u00e1 en un bucle infinito, lo que puede propiciar que los atacantes provoquen un ataque DoS."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 5.0
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 2.9,
+                            "acInsufInfo": true,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-835"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.13.1",
+                                        "matchCriteriaId": "516F3D03-E951-43EA-A475-CB22E2833667"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/BT123/testcasesForMyRequest/tree/master/CVE-2017-12852",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/9560#issuecomment-322395292",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2014-1858",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2018-01-08T19:29:00.237",
+                "lastModified": "2018-01-30T14:44:16.923",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "__init__.py in f2py in NumPy before 1.8.1 allows local users to write to arbitrary files via a symlink attack on a temporary file."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "__init__.py en f2py en NumPy en versiones anteriores a la 1.8.1 permite que los usuarios locales escriban en archivos arbitrarios mediante un ataque symlink en un archivo temporal."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 2.1
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-20"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.8.1",
+                                        "matchCriteriaId": "76515E42-F074-4EF4-9FEB-24E4CAACD1AC"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128358.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128781.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2014/02/08/3",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/65441",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737778",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1062009",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/91318",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/blob/maintenance/1.8.x/doc/release/1.8.1-notes.rst",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/commit/0bb46c1448b0d3f5453d5182a17ea7ac5854ee15",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/pull/4262",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2014-1859",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2018-01-08T19:29:00.297",
+                "lastModified": "2019-04-22T17:48:00.643",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "(1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py, and (4) lib/tests/test_io.py in NumPy before 1.8.1 allow local users to write to arbitrary files via a symlink attack on a temporary file."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "(1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py y (4) lib/tests/test_io.py en NumPy en versiones anteriores a la 1.8.1 permiten que los usuarios locales escriban en archivos arbitrarios mediante un ataque symlink en un archivo temporal."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 2.1
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-59"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.8.0",
+                                        "matchCriteriaId": "BDE35125-D40B-4286-BA33-6D3B4E3F3A99"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:1.8.1:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9381F7BC-B4A0-4411-831F-02DE7D36DA96"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:19:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5991814D-CA77-4C25-90D2-DB542B17E0AD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:20:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF47C9F0-D8DA-4B55-89EB-9B2C9383ADB9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux:6.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2F6AB192-9D7D-4A9A-8995-E53A9DE9EAFC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux:7.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "142AD0DD-4CF3-4D74-9442-459CE3347E3A"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128358.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128781.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2014/02/08/3",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Mailing List",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/65440",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737778",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1062009",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/91317",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/blob/maintenance/1.8.x/doc/release/1.8.1-notes.rst",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/commit/0bb46c1448b0d3f5453d5182a17ea7ac5854ee15",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/pull/4262",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2019-6446",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2019-01-16T05:29:01.370",
+                "lastModified": "2024-08-04T21:15:28.970",
+                "vulnStatus": "Modified",
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "cve@mitre.org",
+                        "tags": [
+                            "disputed"
+                        ]
+                    }
+                ],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An issue was discovered in NumPy 1.16.0 and earlier. It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call. NOTE: third parties dispute this issue because it is  a behavior that might have legitimate applications in (for example)  loading serialized Python object arrays from trusted and authenticated  sources"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "** EN DISPUTA ** Se ha descubierto un problema en NumPy, en versiones 1.16.0 y anteriores. Emplea el m\u00f3dulo de Python pickle de forma insegura, lo que permite que los atacantes remotos ejecuten c\u00f3digo arbitrario mediante un objeto serializado, tal y como queda demostrado con una llamada numpy.load. NOTA: hay terceros que discuten este problema, ya que es un comportamiento que podr\u00eda tener aplicaciones leg\u00edtimas en, por ejemplo, la carga de arrays de objetos de Python serializados de fuentes fiables y autenticadas."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 7.5
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.16.0",
+                                        "matchCriteriaId": "80912416-97D8-4FF8-B2DB-D587EFC9D4BE"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:30:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "97A4B8DF-58DA-4AB6-A1F9-331B36409BA3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00091.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00092.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00015.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/106670",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2019:3335",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2019:3704",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://bugzilla.suse.com/show_bug.cgi?id=1122208",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/12759",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7ZZAYIQNUUYXGMKHSPEEXS4TRYFOUYE4/",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-33430",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2021-12-17T19:15:07.500",
+                "lastModified": "2024-08-04T00:15:32.943",
+                "vulnStatus": "Modified",
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "cve@mitre.org",
+                        "tags": [
+                            "disputed"
+                        ]
+                    }
+                ],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. NOTE: The vendor does not agree this is a vulneraility; In (very limited) circumstances a user may be able provoke the buffer overflow, the user is most likely already privileged to at least provoke denial of service by exhausting memory. Triggering this further requires the use of uncommon API (complicated structured dtypes), which is very unlikely to be available to an unprivileged user"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "** EN DISPUTA ** Se presenta una vulnerabilidad de desbordamiento del b\u00fafer en NumPy versi\u00f3n 1.9.x en la funci\u00f3n PyArray_NewFromDescr_int del archivo ctors.c cuando son especificados arrays de grandes dimensiones (m\u00e1s de 32) desde el c\u00f3digo de Python, lo que podr\u00eda permitir a un usuario malicioso causar una Denegaci\u00f3n de Servicio. NOTA: El proveedor no est\u00e1 de acuerdo en que esto sea una vulnerabilidad; en circunstancias (muy limitadas) un usuario puede ser capaz de provocar el desbordamiento del b\u00fafer, lo m\u00e1s probable es que el usuario ya tenga privilegios para al menos provocar la denegaci\u00f3n de servicio agotando la memoria. Desencadenar esto requiere adem\u00e1s el uso de una API poco com\u00fan (dtypes estructurados complicados), que es muy poco probable que est\u00e9 disponible para un usuario sin privilegios"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.6,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:S/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "SINGLE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 3.5
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 6.8,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-120"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.9.0",
+                                        "versionEndIncluding": "1.9.3",
+                                        "matchCriteriaId": "850F12C4-29D8-4406-B851-8EA669B3F80E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/18939",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-34141",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2021-12-17T19:15:07.543",
+                "lastModified": "2023-02-24T15:35:45.593",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\""
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una comparaci\u00f3n incompleta de cadenas en el componente numpy.core en NumPy en versiones anteriores a la 1.22.0, permite a los atacantes activar una copia ligeramente incorrecta mediante la construcci\u00f3n de objetos de cadena espec\u00edficos. NOTA: el proveedor afirma que este comportamiento de c\u00f3digo reportado es \"completamente inofensivo\"."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "LOW",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 5.0
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-697"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.22.0",
+                                        "matchCriteriaId": "2EB75A95-68BF-48A9-9E5D-9571C7D25352"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:oracle:communications_cloud_native_core_policy:22.1.3:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4B0C905A-EA99-4B4E-A350-7F6A63CD6EB1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/18993",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-41495",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2021-12-17T20:15:08.477",
+                "lastModified": "2024-08-04T04:15:39.510",
+                "vulnStatus": "Modified",
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "cve@mitre.org",
+                        "tags": [
+                            "disputed"
+                        ]
+                    }
+                ],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. NOTE: While correct that validation is missing, an error can only occur due to an exhaustion of memory. If the user can exhaust memory, they are already privileged. Further, it should be practically impossible to construct an attack which can target the memory exhaustion to occur at exactly this place"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "** EN DISPUTA ** Se presenta una vulnerabilidad de Desreferencia de Puntero Null en el archivo numpy.sort en NumPy versi\u00f3n 1.19, en la funci\u00f3n PyArray_DescrNew debido a una falta de comprobaci\u00f3n del valor de retorno, lo que permite a atacantes llevar a cabo ataques de denegaci\u00f3n de servicio mediante la creaci\u00f3n y ordenaci\u00f3n repetitiva de arrays. NOTA: Si bien es correcto que falta la validaci\u00f3n, s\u00f3lo puede producirse un error debido a un agotamiento de la memoria. Si el usuario puede agotar la memoria, ya es privilegiado. Adem\u00e1s, deber\u00eda ser pr\u00e1cticamente imposible construir un ataque que pueda dirigirse al agotamiento de la memoria para que ocurra exactamente en este lugar"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.6,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:S/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "SINGLE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 3.5
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 6.8,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-476"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.19.0",
+                                        "matchCriteriaId": "45CF1897-BE04-465C-96D5-CB5D76DF2F88"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/19038",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-41496",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2021-12-17T20:15:08.517",
+                "lastModified": "2024-08-04T04:15:44.110",
+                "vulnStatus": "Modified",
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "cve@mitre.org",
+                        "tags": [
+                            "disputed"
+                        ]
+                    }
+                ],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. NOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be created by an already privileged user (or internally)"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "** EN DISPUTA ** Un desbordamiento de b\u00fafer en la funci\u00f3n array_from_pyobj del archivo fortranobject.c en NumPy versiones anteriores a 1.19, que permite a atacantes realizar un ataque de denegaci\u00f3n de servicio al construir cuidadosamente un array con valores negativos. NOTA: El proveedor no est\u00e1 de acuerdo en que esto sea una vulnerabilidad; las dimensiones negativas s\u00f3lo pueden ser creadas por un usuario ya privilegiado (o internamente)"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 2.1
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-120"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:numpy:numpy:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.19.0",
+                                        "matchCriteriaId": "341472C4-4DBC-4F3D-B672-5F1C58D5A2C3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/numpy/numpy/issues/19000",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2022-29216",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2022-05-21T00:15:11.980",
+                "lastModified": "2022-06-03T02:47:16.800",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, TensorFlow's `saved_model_cli` tool is vulnerable to a code injection. This can be used to open a reverse shell. This code path was maintained for compatibility reasons as the maintainers had several test cases where numpy expressions were used as arguments. However, given that the tool is always run manually, the impact of this is still not severe. The maintainers have now removed the `safe=False` argument, so all parsing is done without calling `eval`. The patch is available in versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TensorFlow es una plataforma de c\u00f3digo abierto para el aprendizaje autom\u00e1tico. En versiones anteriores a 2.9.0, 2.8.1, 2.7.2 y 2.6.4, la herramienta \"saved_model_cli\" de TensorFlow es vulnerable a una inyecci\u00f3n de c\u00f3digo. Esto puede ser usado para abrir un shell inverso. Esta ruta de c\u00f3digo fue mantenida por razones de compatibilidad, ya que los mantenedores ten\u00edan varios casos de prueba en los que eran usadas expresiones numpy como argumentos. Sin embargo, dado que la herramienta siempre es ejecutada manualmente, el impacto de esto no es grave. Los mantenedores han eliminado el argumento \"safe=False\", por lo que todo el an\u00e1lisis sea realizado sin llamar a \"eval\". El parche est\u00e1 disponible en las versiones 2.9.0, 2.8.1, 2.7.2 y 2.6.4"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 4.6
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.6.4",
+                                        "matchCriteriaId": "D9359D32-D090-44CF-AC43-2046084A28BB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2.7.0",
+                                        "versionEndExcluding": "2.7.2",
+                                        "matchCriteriaId": "C4DFBF2D-5283-42F6-8800-D653BFA5CE82"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.7.0:rc0:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A58EDA5C-66D6-46F1-962E-60AFB7C784A7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.7.0:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "89522760-C2DF-400D-9624-626D8F160CBA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.8.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E9EA1898-ACAA-4699-8BAE-54D62C1819FB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.8.0:rc0:*:*:*:*:*:*",
+                                        "matchCriteriaId": "130DE3C9-6842-456F-A259-BF8FF8457217"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.8.0:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BBF2FCEF-989C-409D-9F4C-81418C65B972"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.9.0:rc0:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9CFB1CFC-579D-4647-A472-6DE8BE1951DE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.9.0:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F3F3F37E-D27F-4060-830C-0AFF16150777"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/blob/f3b9bf4c3c0597563b289c0512e98d4ce81f886e/tensorflow/python/tools/saved_model_cli.py#L566-L574",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/commit/8b202f08d52e8206af2bdb2112a62fafbc546ec7",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/commit/c5da7af048611aa29e9382371f0aed5018516cac",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.6.4",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.7.2",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.8.1",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.9.0",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-75c9-jrh4-79mc",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2022-41884",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2022-11-18T22:15:13.573",
+                "lastModified": "2022-11-22T21:53:09.703",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TensorFlow is an open source platform for machine learning. If a numpy array is created with a shape such that one element is zero and the others sum to a large number, an error will be raised. We have patched the issue in GitHub commit 2b56169c16e375c521a3bc8ea658811cc0793784. The fix will be included in TensorFlow 2.11. We will also cherrypick this commit on TensorFlow 2.10.1, 2.9.3, and TensorFlow 2.8.4, as these are also affected and still in supported range."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TensorFlow es una plataforma de c\u00f3digo abierto para aprendizaje autom\u00e1tico. Si se crea un array numpy con una forma tal que un elemento es cero y los dem\u00e1s suman un n\u00famero grande, se generar\u00e1 un error. Hemos solucionado el problema en el commit de GitHub 2b56169c16e375c521a3bc8ea658811cc0793784. La soluci\u00f3n se incluir\u00e1 en TensorFlow 2.11. Tambi\u00e9n seleccionaremos este commit en TensorFlow 2.10.1, 2.9.3 y TensorFlow 2.8.4, ya que estos tambi\u00e9n se ven afectados y a\u00fan se encuentran en el rango admitido."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        },
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 4.8,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 3.6
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-670"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.8.4",
+                                        "matchCriteriaId": "A694EEE1-BFB9-4E6C-B275-02DC2731961C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2.9.0",
+                                        "versionEndExcluding": "2.9.3",
+                                        "matchCriteriaId": "9057B403-719C-4F10-BAB6-67F84786A89E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:tensorflow:2.10.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6AE6CFC4-0232-4E1C-960D-268C87788735"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/commit/2b56169c16e375c521a3bc8ea658811cc0793784",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-jq6x-99hj-q636",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-34072",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2024-05-03T11:15:22.260",
+                "lastModified": "2024-05-03T12:48:41.067",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "sagemaker-python-sdk is a library for training and deploying machine learning models on Amazon SageMaker. The sagemaker.base_deserializers.NumpyDeserializer module before v2.218.0 allows potentially unsafe deserialization when untrusted data is passed as pickled object arrays. This consequently may allow an unprivileged third party to cause remote code execution, denial of service, affecting both confidentiality and integrity. Users are advised to upgrade to version 2.218.0. Users unable to upgrade should not pass pickled numpy object arrays which originated from an untrusted source, or that could have been tampered with. Only pass pickled numpy object arrays from trusted sources."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "sagemaker-python-sdk es una librer\u00eda para entrenar e implementar modelos de aprendizaje autom\u00e1tico en Amazon SageMaker. El m\u00f3dulo sagemaker.base_deserializers.NumpyDeserializer anterior a v2.218.0 permite una deserializaci\u00f3n potencialmente insegura cuando se pasan datos que no son de confianza como matrices de objetos encurtidos. En consecuencia, esto puede permitir que un tercero sin privilegios provoque la ejecuci\u00f3n remota de c\u00f3digo y la denegaci\u00f3n de servicio, afectando tanto la confidencialidad como la integridad. Se recomienda a los usuarios que actualicen a la versi\u00f3n 2.218.0. Los usuarios que no puedan actualizar no deben pasar conjuntos de objetos numerosos y encurtidos que se originaron en una fuente que no es de confianza o que podr\u00edan haber sido manipulados. Pase \u00fanicamente matrices de objetos numerosos encurtidos de fuentes confiables."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/aws/sagemaker-python-sdk/pull/4557",
+                        "source": "security-advisories@github.com"
+                    },
+                    {
+                        "url": "https://github.com/aws/sagemaker-python-sdk/security/advisories/GHSA-wjvx-jhpj-r54r",
+                        "source": "security-advisories@github.com"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-34997",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2024-05-17T19:15:07.373",
+                "lastModified": "2024-08-27T15:35:16.800",
+                "vulnStatus": "Awaiting Analysis",
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "cve@mitre.org",
+                        "tags": [
+                            "disputed"
+                        ]
+                    }
+                ],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "joblib v1.4.2 was discovered to contain a deserialization vulnerability via the component joblib.numpy_pickle::NumpyArrayWrapper().read_array(). NOTE: this is disputed by the supplier because NumpyArrayWrapper is only used during caching of trusted content."
+                    },
+                    {
+                        "lang": "es",
+                        "value": " Se descubri\u00f3 que joblib v1.4.2 conten\u00eda una vulnerabilidad de deserializaci\u00f3n a trav\u00e9s del componente joblib.numpy_pickle::NumpyArrayWrapper().read_array()."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 1.6,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/joblib/joblib/issues/1582",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/joblib/joblib/issues/977",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        }
+    ]
+}

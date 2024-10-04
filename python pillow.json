@@ -1,0 +1,1197 @@
+{
+    "resultsPerPage": 8,
+    "startIndex": 0,
+    "totalResults": 8,
+    "format": "NVD_CVE",
+    "version": "2.0",
+    "timestamp": "2024-10-04T11:24:14.563",
+    "vulnerabilities": [
+        {
+            "cve": {
+                "id": "CVE-2014-1932",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2014-04-17T14:55:11.090",
+                "lastModified": "2017-07-01T01:29:05.640",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Las funciones (1) load_djpeg ein JpegImagePlugin.py, (2) Ghostscript en EpsImagePlugin.py, (3) load en IptcImagePlugin.py and (4) _copy en Image.py en Python Image Library (PIL) 1.1.7 y anteriores y Pillow anterior a 2.3.1 no crean debidamente archivos temporales, lo que permite a usuarios locales sobrescribir archivos arbitrarios y obtener informaci\u00f3n sensible a trav\u00e9s de un ataque symlink sobre el archivo temporal."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 4.4
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 3.4,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-59"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2.3.0",
+                                        "matchCriteriaId": "A1BAE1A0-BC57-4410-83DD-DB85B992398A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pythonware:python_imaging_library:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.1.7",
+                                        "matchCriteriaId": "C0BFFC56-855D-49E5-A4FD-7AA2D68F5B5C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-updates/2014-05/msg00002.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2014/02/11/1",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/65511",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.ubuntu.com/usn/USN-2168-1",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737059",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/python-imaging/Pillow/commit/4e9f367dfd3f04c8f5d23f7f759ec12782e10ee7",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://security.gentoo.org/glsa/201612-52",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2014-1933",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2014-04-17T14:55:11.120",
+                "lastModified": "2017-07-01T01:29:05.687",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Los scripts (1) JpegImagePlugin.py y (2) EpsImagePlugin.py en Python Image Library (PIL) 1.1.7 y anteriores y Pillow anterior a 2.3.1 utiliza los nombres de archivos temporales en la l\u00ednea de comando, lo que facilita a usuarios locales realizar ataques symlink mediante el listado de los procesos."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 2.1
+                            },
+                            "baseSeverity": "LOW",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-264"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2.3.0",
+                                        "matchCriteriaId": "A1BAE1A0-BC57-4410-83DD-DB85B992398A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pythonware:python_imaging_library:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.1.7",
+                                        "matchCriteriaId": "C0BFFC56-855D-49E5-A4FD-7AA2D68F5B5C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-updates/2014-05/msg00002.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2014/02/10/15",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2014/02/11/1",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/65513",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.ubuntu.com/usn/USN-2168-1",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/python-imaging/Pillow/commit/4e9f367dfd3f04c8f5d23f7f759ec12782e10ee7",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://security.gentoo.org/glsa/201612-52",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2014-3007",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2014-04-27T20:55:23.697",
+                "lastModified": "2014-04-28T17:51:13.663",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Python Image Library (PIL) 1.1.7 and earlier and Pillow 2.3 might allow remote attackers to execute arbitrary commands via shell metacharacters in unspecified vectors related to CVE-2014-1932, possibly JpegImagePlugin.py."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Python Image Library (PIL) 1.1.7 y anteriores y Pillow 2.3 podr\u00edan permitir a atacantes remotos ejecutar comandos arbitrarios a trav\u00e9s de metacaracteres de shell en vectores no especificados relacionados con CVE-2014-1932, posiblemente JpegImagePlugin.py."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10.0
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 10.0,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:2.3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8CAE6E4E-F836-4C22-A101-CD7415227BE2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:pythonware:python_imaging_library:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.1.7",
+                                        "matchCriteriaId": "C0BFFC56-855D-49E5-A4FD-7AA2D68F5B5C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-1932.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737059",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2014-3589",
+                "sourceIdentifier": "secalert@redhat.com",
+                "published": "2014-08-25T14:55:06.643",
+                "lastModified": "2018-10-30T16:27:35.843",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "PIL/IcnsImagePlugin.py en Python Imaging Library (PIL) y Pillow anterior a 2.3.2 y 2.5.x anterior a 2.5.2 permite a atacantes remotos causar una denegaci\u00f3n de servicio a trav\u00e9s de un tama\u00f1o de bloque manipulado."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 5.0
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-20"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:debian:python-imaging:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BAF753AF-22CC-46C1-ABFD-53A64C7E45BE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2.3.1",
+                                        "matchCriteriaId": "B8E7BF87-20E3-4074-B71E-72A447AAB741"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:2.3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8CAE6E4E-F836-4C22-A101-CD7415227BE2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:2.5.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4C00674D-D6AE-4BE1-83FF-38A1D6FBD327"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:2.5.1:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B9B8EF31-3D94-4455-A4F1-3588CA0692A3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:2.5.2:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D116F923-B8E6-4E2E-859B-2D5BE1F9C212"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:opensuse:opensuse:13.2:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "03117DF1-3BEC-4B8D-AD63-DBBDB2126081"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00056.html",
+                        "source": "secalert@redhat.com"
+                    },
+                    {
+                        "url": "http://secunia.com/advisories/59825",
+                        "source": "secalert@redhat.com"
+                    },
+                    {
+                        "url": "http://www.debian.org/security/2014/dsa-3009",
+                        "source": "secalert@redhat.com"
+                    },
+                    {
+                        "url": "https://github.com/python-pillow/Pillow/commit/205e056f8f9b06ed7b925cf8aa0874bc4aaf8a7d",
+                        "source": "secalert@redhat.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://pypi.python.org/pypi/Pillow/2.3.2",
+                        "source": "secalert@redhat.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://pypi.python.org/pypi/Pillow/2.5.2",
+                        "source": "secalert@redhat.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2016-2533",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2016-04-13T16:59:14.600",
+                "lastModified": "2017-07-01T01:29:38.907",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Desbordamiento de buffer en la funci\u00f3n ImagengPcdDecode en PcdDecode.c en Pillow en versiones anteriores a 3.1.1 y Python Imageng Library (PIL) 1.1.7 y versiones anteriores permite a atacantes remotos provocar una denegaci\u00f3n de servicio (ca\u00edda) a trav\u00e9s de un archivo PhotoCD manipulado."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 6.5,
+                                "baseSeverity": "MEDIUM"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 4.3
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-119"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "3.1.0",
+                                        "matchCriteriaId": "2F573E4A-55AB-4868-8CA1-7C7E5EEAC905"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python_imaging_project:python_imaging:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.1.7",
+                                        "matchCriteriaId": "7587F262-02CB-4294-8CC3-364415D5D6B5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://www.debian.org/security/2016/dsa-3499",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2016/02/02/5",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2016/02/22/2",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.oracle.com/technetwork/topics/security/bulletinjan2016-2867206.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/python-pillow/Pillow/commit/5bdf54b5a76b54fb00bd05f2d733e0a4173eefc9#diff-8ff6909c159597e22288ad818938fd6b",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/python-pillow/Pillow/commit/ae453aa18b66af54e7ff716f4ccb33adca60afd4#diff-8ff6909c159597e22288ad818938fd6b",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/python-pillow/Pillow/pull/1706",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://security.gentoo.org/glsa/201612-52",
+                        "source": "cve@mitre.org"
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2019-19911",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2020-01-05T22:15:11.300",
+                "lastModified": "2023-11-07T03:07:51.607",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "There is a DoS vulnerability in Pillow before 6.2.2 caused by FpxImagePlugin.py calling the range function on an unvalidated 32-bit integer if the number of bands is large. On Windows running 32-bit Python, this results in an OverflowError or MemoryError due to the 2 GB limit. However, on Linux running 64-bit Python this results in the process being terminated by the OOM killer."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Hay una vulnerabilidad DoS en Pillow versiones anteriores a la versi\u00f3n  6.2.2, causada por el archivo FpxImagePlugin.py llamando a la funci\u00f3n range en un entero de 32 bits sin validar si el n\u00famero de bandas es grande. En Windows ejecutando Python de 32 bits, esto resulta en un OverflowError o MemoryError debido al l\u00edmite de 2 GB. Sin embargo, en Linux ejecutando Python de 64 bits, esto resulta en que el proceso sea terminado por el asesino OOM."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 5.0
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 2.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-190"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "6.2.2",
+                                        "matchCriteriaId": "7AB2F1CD-5972-4F7B-A025-D92709CABD9E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:30:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "97A4B8DF-58DA-4AB6-A1F9-331B36409BA3"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:esm:*:*:*",
+                                        "matchCriteriaId": "815D70A8-47D3-459C-A32C-9FEACA0659D1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:canonical:ubuntu_linux:16.04:*:*:*:esm:*:*:*",
+                                        "matchCriteriaId": "7A5301BF-1402-4BE0-A0F8-69FBE79BC6D6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:canonical:ubuntu_linux:18.04:*:*:*:lts:*:*:*",
+                                        "matchCriteriaId": "23A7C53F-B80F-4E6A-AFA9-58EEA84BE11D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:canonical:ubuntu_linux:19.10:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A31C8344-3E02-4EB8-8BD8-4C84B7959624"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3DUMIBUYGJRAVJCTFUWBRLVQKOUTVX5P/",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://usn.ubuntu.com/4272-1/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.debian.org/security/2020/dsa-4631",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-34552",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2021-07-13T17:15:09.400",
+                "lastModified": "2023-11-07T03:36:01.130",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Pillow through 8.2.0 and PIL (aka Python Imaging Library) through 1.1.7 allow an attacker to pass controlled parameters directly into a convert function to trigger a buffer overflow in Convert.c."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Pillow versiones hasta 8.2.0 y PIL (tambi\u00e9n se conoce como Python Imaging Library) versiones hasta 1.1.7, permiten a un atacante pasar par\u00e1metros controlados directamente a una funci\u00f3n de conversi\u00f3n para desencadenar un desbordamiento de b\u00fafer en el archivo Convert.c"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 7.5
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-120"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.0",
+                                        "versionEndIncluding": "1.1.7",
+                                        "matchCriteriaId": "3C5F13BB-0D7C-493B-9055-884B03F22B0B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.2",
+                                        "versionEndIncluding": "8.2.0",
+                                        "matchCriteriaId": "8DF6A0E8-B8D0-4848-9EC8-51FB9B43F033"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:33:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E460AA51-FCDA-46B9-AE97-E6676AA5E194"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:34:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A930E247-0B43-43CB-98FF-6CE7B8189835"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://lists.debian.org/debian-lts-announce/2021/07/msg00018.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7V6LCG525ARIX6LX5QRYNAWVDD2MD2SV/",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VUGBBT63VL7G4JNOEIPDJIOC34ZFBKNJ/",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://security.gentoo.org/glsa/202211-10",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2022-22817",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2022-01-10T14:12:55.160",
+                "lastModified": "2024-03-22T11:15:45.900",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "PIL.ImageMath.eval in Pillow before 9.0.0 allows evaluation of arbitrary expressions, such as ones that use the Python exec method. A lambda expression could also be used."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "PIL.ImageMath.eval en Pillow antes de la versi\u00f3n 9.0.0 permite la evaluaci\u00f3n de expresiones arbitrarias, como las que utilizan el m\u00e9todo exec de Python. Tambi\u00e9n se puede utilizar una expresi\u00f3n lambda,"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 7.5
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10.0,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.0.1",
+                                        "matchCriteriaId": "247E74B8-CE5D-4409-B0F2-4F76D7C0EC99"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00018.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00021.html",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#restrict-builtins-available-to-imagemath-eval",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://pillow.readthedocs.io/en/stable/releasenotes/9.0.1.html#security",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://security.gentoo.org/glsa/202211-10",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.debian.org/security/2022/dsa-5053",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
